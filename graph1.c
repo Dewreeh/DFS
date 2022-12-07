@@ -70,42 +70,7 @@ int depth_first_search(int A[N][N], int v, int* visited, int N, deque* way){
     if(count(way) < N) return depth_first_search(A, (search(way, v))->prev->data, visited, N, way);
     return 0;
 }
-int* create_graph(int A[N][N], int n){
-    int *array=(int*)A;
-    for(int i = 0; i<n; i++){
-        printf("\n");
-        for(int j = 0; j<n; j++){
-            array[i*n+j] = rand()%2;
-            printf("%d", array[i*n+j]);
-        }
-    }
-    return array;
-}
-int find_vertex_stepen(int arr[N][N], int n){
-    int one_count = 0;
-    for(int i = 0; i<n; i++){
-        for(int j = 0; j<n; j++){
-            if(arr[i][j] == 1){
-                one_count+=1;
-            }
-            //printf("%d", arr[i*n+j]);
-        }
-    }
-    int vertex = one_count/2;
-    return vertex;
-}
-int find_st(int arr[N][N], int n){
-    int one_count = 0;
-    for(int i = 0; i<n; i++){
-        for(int j = 0; j<n; j++){
-            if(arr[i][j] == 1){
-                one_count+=1;
-            }
-            //printf("%d", arr[i*n+j]);
-        }
-    }
-    return one_count;
-}
+
 
 
 
